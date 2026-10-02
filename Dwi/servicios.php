@@ -18,7 +18,7 @@ if(isset($_GET['logout'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema Web</title>
+    <title>Servicios - Sistema Web</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -39,7 +39,6 @@ if(isset($_GET['logout'])){
 
         .contenido{
             flex:1;
-            min-height:600px;
         }
 
         .card{
@@ -69,6 +68,7 @@ if(isset($_GET['logout'])){
 <body>
 
     <!-- Menú de Navegación -->
+       <!-- Menú de Navegación -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
 
@@ -135,26 +135,25 @@ if(isset($_GET['logout'])){
         </div>
     </nav>
 
-
     <!-- Encabezado -->
     <section class="hero">
+        
         <div class="container">
+
+        
             <h1 class="display-4 fw-bold">
-                Sistema Web
+                Nuestros Servicios
             </h1>
 
             <p class="lead">
-                Ejemplo de navegación y validación de datos.
+                Conoce los servicios que ofrece nuestro sistema web.
             </p>
         </div>
     </section>
 
     <!-- Contenido -->
     <main class="contenido">
-
-        <section class="container py-5">
-
-    <?php if(isset($_SESSION['id'])){ ?>
+ <?php if(isset($_SESSION['id'])){ ?>
 
 <div class="container mt-4">
 
@@ -177,19 +176,18 @@ if(isset($_GET['logout'])){
 </div>
 
 <?php } ?>
-            <h2 class="text-center mb-5">
-                Validación de Datos
-            </h2>
+        <div class="container py-5">
 
             <div class="row">
 
                 <div class="col-md-4 mb-4">
                     <div class="card shadow h-100">
-                        <div class="card-body">
-                            <h3>Frontend</h3>
+                        <div class="card-body text-center">
+
+                        
+                            <h3>Registro de Usuarios</h3>
                             <p>
-                                Verifica que los datos ingresados tengan el formato correcto
-                                antes de enviarlos al servidor mediante HTML, CSS y JavaScript.
+                                Permite a nuevos usuarios crear una cuenta dentro del sistema.
                             </p>
                         </div>
                     </div>
@@ -197,11 +195,10 @@ if(isset($_GET['logout'])){
 
                 <div class="col-md-4 mb-4">
                     <div class="card shadow h-100">
-                        <div class="card-body">
-                            <h3>Backend</h3>
+                        <div class="card-body text-center">
+                            <h3>Inicio de Sesión Seguro</h3>
                             <p>
-                                Comprueba la información recibida desde el servidor para evitar
-                                datos incorrectos, ataques o registros inválidos.
+                                Acceso protegido para usuarios registrados mediante validaciones.
                             </p>
                         </div>
                     </div>
@@ -209,11 +206,10 @@ if(isset($_GET['logout'])){
 
                 <div class="col-md-4 mb-4">
                     <div class="card shadow h-100">
-                        <div class="card-body">
-                            <h3>Usuarios Humanos</h3>
+                        <div class="card-body text-center">
+                            <h3>Gestión de Información</h3>
                             <p>
-                                Se utilizan mecanismos como CAPTCHA y verificaciones para
-                                confirmar que quien interactúa con el sistema es una persona real.
+                                Administración y consulta de información dentro del sistema.
                             </p>
                         </div>
                     </div>
@@ -221,7 +217,10 @@ if(isset($_GET['logout'])){
 
             </div>
 
-        </section>
+            <!-- Espacio para scroll -->
+            <div style="height:400px;"></div>
+
+        </div>
 
     </main>
 
@@ -233,15 +232,10 @@ if(isset($_GET['logout'])){
             <div class="mb-3">
 
                 <a href="buzon.php">Buzón</a>
-
                 <a href="ayuda.php">Ayuda</a>
-
                 <a href="contacto.php">Contáctanos</a>
-
                 <a href="mapa.php">Mapa del Sitio</a>
-
                 <a href="recuperar.php">Recuperar Contraseña</a>
-
                 <a href="chat.php">Chat</a>
 
             </div>
